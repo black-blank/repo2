@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<!--  
+	这些项分别是：properties、settings、typeAliases、typeHandlers、plugins、environments、mappers。
+        注意：这些配置项必须按照先后顺序进行配置。 -->
+	
+	<!-- 用于配置属性信息 -->
+<!-- 	<properties> -->
+<!-- 		<property name="" value=""/> -->
+<!-- 	</properties> -->
+	
+	<!-- 用于配置MyBatis的运行时方式 -->
+	<settings>
+	 <!-- lazyLoadingEnabled:延迟加载启动，默认是false -->
+        <setting name="lazyLoadingEnabled" value="true"/>
+		<!-- 开启二级缓存 -->
+		<setting name="cacheEnabled" value="true"/>
+		
+		<!-- 打印日志 -->
+		<setting name="logImpl" value="STDOUT_LOGGING"/>
+	</settings>
+	
+	<!-- 配置类型别名，可以在xml中用别名取代全限定名 -->
+	<typeAliases>
+		<typeAlias alias="user" type="com.shuang.black.entity.User"/>
+	</typeAliases>
+	
+	<!-- 配置类型处理器 -->
+<!-- 	<typeHandlers> -->
+<!-- 		<typeHandler handler=""/> -->
+<!-- 	</typeHandlers> -->
+	
+	<!-- 配置拦截器，用于拦截sql语句的执行。 -->
+<!-- 	<plugins> -->
+<!-- 		<plugin interceptor=""></plugin> -->
+<!-- 	</plugins> -->
+	
+	<!-- 配置数据源信息、连接池、事务属性等 -->
+	<!-- <environments default="">
+		<environment id=""></environment>
+	</environments> -->
+	
+	<!-- 配置SQL映射文件 -->
+	<mappers>
+		<mapper resource="mapping/UserMapping.xml"/>
+	</mappers>
+	
+	
+</configuration>
