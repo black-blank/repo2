@@ -1,0 +1,6 @@
+test*
+
+#java file
+*.class
+
+.gitignore
